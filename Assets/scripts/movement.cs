@@ -16,6 +16,8 @@ public class movement : MonoBehaviour
     //dit zij de variabele voor het schieten
     public float throwCooldown;
     public float throwForce;
+    public Vector3 giveMeMoney;
+    public Vector3 overtimeCheck;
     bool readyToThrow;
 
     //dit is het code key die je moet intoesten voor het schieten
@@ -49,6 +51,8 @@ public class movement : MonoBehaviour
         {
             Throw();
         }
+        giveMeMoney = rb.angularVelocity;
+        overtimeCheck = rb.velocity;
     }
 
     // Update is called once per frame
@@ -62,14 +66,6 @@ public class movement : MonoBehaviour
             Debug.Log(thrust);
             rb.AddRelativeForce(Vector3.forward * thrust);
             
-        }
-        if (Input.GetAxisRaw("Horizontal") > 0)
-        {
-            rb.AddRelativeForce(Vector3.right * thrust);
-        }
-        else if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            rb.AddRelativeForce(Vector3.left * thrust);
         }
 
 
