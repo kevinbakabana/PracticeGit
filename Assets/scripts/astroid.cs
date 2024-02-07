@@ -12,6 +12,7 @@ public class astroid : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(new Vector3(Random.Range(100f,-100f),0, Random.Range(100, -100)));
+        rb.AddTorque(new Vector3(Random.Range(100f, -100f), 0, Random.Range(100, -100)));
     }
 
     // Update is called once per frame
