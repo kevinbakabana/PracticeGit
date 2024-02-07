@@ -150,6 +150,7 @@ MonoBehaviour:
   astroids: {fileID: 1691711504867360793, guid: 800a410a844af554bad6e70624fcf4ed,
     type: 3}
   astroidP: {fileID: 2153880835176642837}
+  megumin: {fileID: 6283350990883391115, guid: e671a681cf5567546a46c5a56bda4fa5, type: 3}
 --- !u!1 &8173470466517007883
 GameObject:
   m_ObjectHideFlags: 0

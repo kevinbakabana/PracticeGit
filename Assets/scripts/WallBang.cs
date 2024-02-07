@@ -9,7 +9,7 @@ public class WallBang : MonoBehaviour
     Vector3 xMin, xMax, yMin, yMax;
 
 
-    public Camera cam;
+    public Camera cam = Camera.main;
 
     public GameObject moneySpread;
     // Start is called before the first frame update
