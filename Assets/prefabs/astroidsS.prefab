@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astroids: {fileID: 0}
-  astroidP: {fileID: 0}
+  astroidP: {fileID: 3060720085346469183}
+  megumin: {fileID: 6283350990883391115, guid: e671a681cf5567546a46c5a56bda4fa5, type: 3}
 --- !u!54 &4972024428274224741
 Rigidbody:
   m_ObjectHideFlags: 0

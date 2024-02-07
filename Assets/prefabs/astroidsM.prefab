@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1691711504867360793}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 0, z: 3.11}
+  m_LocalPosition: {x: -2.5521688, y: 0, z: 4.418322}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f44f9292393774dac4327ddfa4c67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astroids: {fileID: 8038247349872366360, guid: a2546b08f3e80e7418ba302b0ae42ae7,
+  astroids: {fileID: 3484649859872592026, guid: a2546b08f3e80e7418ba302b0ae42ae7,
     type: 3}
   astroidP: {fileID: 2649118501998540112}
+  megumin: {fileID: 6283350990883391115, guid: e671a681cf5567546a46c5a56bda4fa5, type: 3}
 --- !u!54 &29657398269621612
 Rigidbody:
   m_ObjectHideFlags: 0

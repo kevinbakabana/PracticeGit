@@ -12,6 +12,7 @@ public class movement : MonoBehaviour
     //dit is het object wat je schiet
     public GameObject objectToThrow;
     public GameObject lazer;
+    public LineRenderer lineRenderer;
 
     //dit zij de variabele voor het schieten
     public float throwCooldown;
@@ -88,10 +89,15 @@ public class movement : MonoBehaviour
     {
         Debug.Log("lazer");
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.forward, 100.0F);
+        hits = Physics.RaycastAll(transform.position, transform.forward, 100.0f);
+        //laser from point a to b
+        lineRenderer.SetPosition(0, attackPoint.position);
+        lineRenderer.SetPosition(1, attackPoint.position + (transform.forward * 100f));
+        StartCoroutine(ShootLaser());
         Debug.DrawRay(transform.position, transform.forward *100);
         for (int i = 0; i < hits.Length; i++)
         {
+
             RaycastHit hit = hits[i];
             Renderer rend = hit.transform.GetComponent<Renderer>();
             if (rend)
@@ -100,10 +106,19 @@ public class movement : MonoBehaviour
                 Color tempColor = rend.material.color;
                 tempColor.a = 0.3f;
                 rend.material.color = tempColor;
-                Destroy(rend.gameObject);
-               
+                astroid bussin = rend.transform.GetComponent<astroid>();
+                if(bussin != null)
+                {
+                    bussin.Dynamite();
+                }
             }
         }
+    }
+    IEnumerator ShootLaser()
+    {
+        lineRenderer.enabled = true;
+        yield return new WaitForSeconds(.3f);
+        lineRenderer.enabled = false;
     }
 
 }
