@@ -34,7 +34,21 @@ public class astroid : MonoBehaviour
             GameObject meguMegu = Instantiate(megumin, astroidP.transform.position, Quaternion.identity);
             Destroy(meguMegu, 2f);
         }
+        if (astroids == null)
+        {
 
+            GameObject.Find("gameManager").GetComponent<gameManager>().LostAstroids();
+        }
+        else
+        {
+            int current = 1;
+            if (astroids.name.Equals("astroidsM"))
+            {
+                current = 2;
+            }
+            GameObject.Find("gameManager").GetComponent<gameManager>().SplitAstroids(current);
+        }
+       
         Destroy(gameObject);
     }
     public void Dynamite()
@@ -48,6 +62,19 @@ public class astroid : MonoBehaviour
         }
         GameObject meguMegu = Instantiate(megumin, astroidP.transform.position, Quaternion.identity);
         Destroy(meguMegu, 2f);
+        if (astroids == null)
+        {
+            GameObject.Find("gameManager").GetComponent<gameManager>().LostAstroids();
+        }
+        else
+        {
+            int current = 1;
+            if (astroids.name.Equals("astroidsM"))
+            {
+                current = 2;
+            }
+            GameObject.Find("gameManager").GetComponent<gameManager>().SplitAstroids(current);
+        }
         Destroy(gameObject);
     }
 }

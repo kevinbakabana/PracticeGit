@@ -12,6 +12,11 @@ public class bullets : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * speed;    
     }
+
+    private void Update()
+    {
+        Destroy(gameObject, 3f);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject);

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6238839119572603592}
   - component: {fileID: 2409177331233775700}
   - component: {fileID: 4972024428274224741}
+  - component: {fileID: 4966773680062009408}
   m_Layer: 7
   m_Name: astroidsS
   m_TagString: small
@@ -150,6 +151,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4966773680062009408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3484649859872592026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff79901a7baa3a84bbf65f77c2d44d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xMin: {x: 0, y: 0, z: 0}
+  xMax: {x: 0, y: 0, z: 0}
+  yMin: {x: 0, y: 0, z: 0}
+  yMax: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  moneySpread: {fileID: 3484649859872592026}
 --- !u!1 &4332238424897714803
 GameObject:
   m_ObjectHideFlags: 0
