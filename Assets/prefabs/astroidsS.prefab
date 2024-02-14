@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f44f9292393774dac4327ddfa4c67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movement: {fileID: 0}
   astroids: {fileID: 0}
   astroidP: {fileID: 3060720085346469183}
   megumin: {fileID: 6283350990883391115, guid: e671a681cf5567546a46c5a56bda4fa5, type: 3}

@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f44f9292393774dac4327ddfa4c67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movement: {fileID: 0}
   astroids: {fileID: 3484649859872592026, guid: a2546b08f3e80e7418ba302b0ae42ae7,
     type: 3}
   astroidP: {fileID: 2649118501998540112}

@@ -20,9 +20,9 @@ public class gameManager : MonoBehaviour
     private int spawn;
     void Start()
     {
-        Large = 5;
-        medeum = 3;
-        Small = 1;
+        Large = 50;
+        medeum = 30;
+        Small = 10;
 
 
         score.text = "score:" + newScore.ToString();
@@ -52,8 +52,8 @@ public class gameManager : MonoBehaviour
 
     void StartNewRound()
     {
-        int randomIndex = UnityEngine.Random.Range(1, asstroids.Count);
-        Vector3 RandomSpawnPosition = new Vector3(UnityEngine.Random.Range(-10, 10), 0, UnityEngine.Random.Range(-11, 10));
+        int randomIndex = UnityEngine.Random.Range(0, asstroids.Count);
+        Vector3 RandomSpawnPosition = new Vector3(UnityEngine.Random.Range(-15, 15), 0, UnityEngine.Random.Range(-15, 15));
 
         Instantiate(asstroids[randomIndex], RandomSpawnPosition, Quaternion.identity);
         sceneAstroid++;
@@ -80,6 +80,30 @@ public class gameManager : MonoBehaviour
        
         score.text ="score: " + newScore.ToString();
         sceneAstroid++;
+    }
+
+    public void LosePoints(int current)
+    {
+        if(current == 1)
+        {
+            newScore -= medeum;
+        }
+        else
+        {
+            newScore -= Large;
+        }
+    }
+    public void LostToSmall()
+    {
+        newScore-= Small;
+        score.text = "score:" + newScore.ToString();
+        sceneAstroid--;
+    }
+
+    public void TotalScore()
+    {
+        PlayerPrefs.SetInt("score", newScore);
+        PlayerPrefs.Save();
     }
 
 }

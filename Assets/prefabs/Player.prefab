@@ -182,12 +182,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6f0d6bb6490a44588956697a28a921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charge: 0
   attackPoint: {fileID: 2351404454100706122}
   objectToThrow: {fileID: 3530099747119301828, guid: 199d6bfea62cf07458770128d59afc10,
     type: 3}
   lazer: {fileID: 5416395635751924235, guid: c8e012a6f82f40049aa9d0096cc47b19, type: 3}
+  lineRenderer: {fileID: 0}
   throwCooldown: 0.2
   throwForce: 3
+  giveMeMoney: {x: 0, y: 0, z: 0}
+  overtimeCheck: {x: 0, y: 0, z: 0}
   throwKey: 323
   lazerKey: 324
   torque: 3

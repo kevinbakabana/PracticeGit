@@ -8,6 +8,7 @@ TagManager:
   - lazer
   - small
   - Lazer
+  - player
   layers:
   - Default
   - TransparentFX
